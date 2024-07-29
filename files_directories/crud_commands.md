@@ -1,3 +1,9 @@
+# Find Current Directory
+
+```bash
+pwd = print working directory
+```
+
 # Create Files
 
 Create a File

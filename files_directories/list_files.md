@@ -1,6 +1,37 @@
-ls = list all files
-ls -a = list all files including hidden
-ls -l directory = show all files in long list format of directory
-ls -al = show all files(including hidden) in long list format
-ls -hl = human readable size with long list format
-ls -alh = all flag combined
+# List Files
+
+List all files
+
+```bash
+ls
+```
+
+List all files including hidden files
+
+```bash
+ls -a
+```
+
+Show all files in long list format of directory
+
+```bash
+ls -l directory
+```
+
+Show all files(including hidden) in long list format
+
+```bash
+ls -al
+```
+
+Human readable sizes with long list format
+
+```bash
+ls -hl
+```
+
+All flag combined
+
+```bash
+ls -alh
+```

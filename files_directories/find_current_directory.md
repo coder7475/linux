@@ -1,1 +1,0 @@
-pwd = print working directory
