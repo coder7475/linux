@@ -1,17 +1,16 @@
 # Types of Modes
 
 PC and Server generally has two modes:
-  
-  1. Kernel Mode
-  2. User Mode
+
+1. Kernel Mode
+2. User Mode
 
 # User Mode
 
-userland - user space
-
+- process in user mode are said to be in **userland** - user space
 - process operates in user mode and can't access device
 - processes indirectly access deivices through kernel
-- uses ```system calls``` to request kernel to perform tasks
+- uses `system calls` to request kernel to perform tasks
 
 # Kernel Mode
 
@@ -25,3 +24,8 @@ userland - user space
 - File system operations
 - Device operations
 
+# Commands for System Calls
+
+```bash
+strace
+```
