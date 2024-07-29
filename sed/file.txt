@@ -1,0 +1,5 @@
+
+Unix is a multitasking, multiuser operating system.
+Unix development started in 1969 at Bell Labs
+Linux is also based on Unix.
+Unix is very powerful, Unix is very easy to learn.
