@@ -33,6 +33,20 @@ To disable `ufw`, run:
   sudo ufw disable
 ```
 
+### Open or close a port
+
+To open a port (port no: 22):
+
+```bash
+  sudo ufw allow 22
+```
+
+To close an opened port:
+
+```bash
+  sudo ufw deny 22
+```
+
 ### References
 
 - https://ubuntu.com/server/docs/firewalls
