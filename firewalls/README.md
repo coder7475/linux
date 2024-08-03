@@ -47,6 +47,28 @@ To close an opened port:
   sudo ufw deny 22
 ```
 
+### Add or remove a rule
+
+Rules can also be added using a _numbered_ format.
+
+See numbered format:
+
+```bash
+  sudo ufw status numbered
+```
+
+To add a rule using _numbered_ format:
+
+```bash
+  sudo ufw insert 1 allow 80 # Add allowing 80 port as number 1 rule
+```
+
+To remove a rule, use `delete` followed by the rule:
+
+```bash
+  sudo ufw delete deny 22 # delete the deny 22 rule
+```
+
 ### References
 
 - https://ubuntu.com/server/docs/firewalls
