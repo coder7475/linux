@@ -69,6 +69,8 @@ To remove a rule, use `delete` followed by the rule:
   sudo ufw delete deny 22 # delete the deny 22 rule
 ```
 
+## Allow Access from specific hosts
+
 ### References
 
 - https://ubuntu.com/server/docs/firewalls
