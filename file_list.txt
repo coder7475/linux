@@ -1,0 +1,26 @@
+total 104
+drwxr-xr-x 21 fahad fahad  4096 Aug  7 14:27 .
+drwxr-xr-x  5 fahad fahad  4096 Aug  4 09:41 ..
+-rw-r--r--  1 fahad fahad 12288 Jul 29 13:56 .README.md.swp
+drwxr-xr-x  8 fahad fahad  4096 Aug  7 14:23 .git
+-rw-r--r--  1 fahad fahad   112 Aug  3 13:06 README.md
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:42 config_user_resources
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:42 count-process
+-rw-r--r--  1 fahad fahad     0 Aug  7 14:27 file_list.txt
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 12:16 files_directories
+drwxr-xr-x  2 fahad fahad  4096 Aug  3 12:43 firewalls
+-rw-r--r--  1 fahad fahad   473 Aug  7 12:02 general_commands.md
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:48 hard_links
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:40 kernel
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:43 logging_in_and_system_documentation
+drwxr-xr-x  3 fahad fahad  4096 Jul 29 11:44 manage_accounts
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:44 pager
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:44 permissions
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:44 process_management
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:45 regex
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:45 root_account
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:45 search_grep
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 12:36 sed
+drwxr-xr-x  2 fahad fahad  4096 Aug  7 14:05 shell_other_basics
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:45 soft_links
+drwxr-xr-x  2 fahad fahad  4096 Jul 29 11:45 vim
