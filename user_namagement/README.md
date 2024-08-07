@@ -40,6 +40,43 @@ This command creates John's account with uid (-u) as 1002, the home directory (-
   id john
 ```
 
+- Find all users of linux
+
+```bash
+  cat /etc/passwd
+```
+
+- Format of user shown:
+
+```bash
+  john:x:1002:1002::/home/john:/bin/bash
+```
+
+Heres what above format represents:
+
+- `john`: User Name
+- `x`: encrypted password of the user
+- `1002`: This is UID (User ID)
+- `1002`: This is GID (Group ID)
+- `/home/john`: home directory of the user
+- `/bin/bash`: default shell of the user
+
+## How to delete a user
+
+- Syntax:
+
+```bash
+  sudo userdel username
+```
+
+- Example
+
+```bash
+  sudo userdel john
+```
+
+This will delete the user account for `john`, along with their home directory and any files or directories owned by the user.
+
 ### References
 
 - https://www.freecodecamp.org/news/how-to-manage-users-in-linux/
