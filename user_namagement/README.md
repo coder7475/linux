@@ -101,7 +101,21 @@ This will delete the user account for `john`, along with their home directory an
 
 ## How to Modify User Accounts
 
-- How to modify usergor
+- How to modify user gropus in linux
+
+```bash
+  sudo usermod -aG group_name user_name
+```
+
+This command adds the specified user to the specified group without removing the user from any other groups, using superuser privileges.
+
+- How to change default shell in linux
+
+```bash
+  sudo usermod -s /bin/zsh john
+```
+
+This command updates John's account to use the new default shell — /bin/zsh.
 
 ### References
 
