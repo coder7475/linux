@@ -77,6 +77,32 @@ Heres what above format represents:
 
 This will delete the user account for `john`, along with their home directory and any files or directories owned by the user.
 
+## Group Management
+
+### How to create a new group in linux
+
+- Add new group
+
+```bash
+  sudo groupadd group_name
+```
+
+- List all groups
+
+```bash
+  cat /etc/group
+```
+
+- To find a specific group
+
+```bash
+  cat /etc/group | grep group_name
+```
+
+## How to Modify User Accounts
+
+- How to modify usergor
+
 ### References
 
 - https://www.freecodecamp.org/news/how-to-manage-users-in-linux/
