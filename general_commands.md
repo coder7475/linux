@@ -1,5 +1,11 @@
 # General Commands
 
+**See Ubuntu OS version**:
+
+```bash
+  lsb_release -a
+```
+
 **List the users of the OS**:
 
 ```bash
@@ -18,7 +24,7 @@
     uptime
 ``
 
-**Change the computer hostname**:
+**Change the computer hostname in UBUNTU**:
 1. Access the hostname file
 
 ```bash
