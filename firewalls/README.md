@@ -117,8 +117,44 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
   sudo ufw --dry-run allow http
 ```
 
+### Configure to support IPv6
+
+1. Open Config File: using nano(a text editor)
+
+```bash
+  sudo nano /etc/default/ufw
+```
+
+2. Then Change The IPV6 value to yes:
+
+```bash
+ IPV6=yes
+```
+
+### To check all open ports that are running
+
+1. Install `net-tools` if not already installed
+
+```bash
+  sudo apt install net-tools
+```
+
+2. Show all open port that are currently running:
+
+```bash
+  netstat -tulpn
+```
+
+### ufw application integration
+
 ### References
 
 - https://ubuntu.com/server/docs/firewalls
 
 - https://opensource.com/article/20/2/firewall-cheat-sheet?ref=dailydev
+
+- https://github.com/coder7475/GeekyShowsNotes/blob/main/ufw_firewall_setup.md
+
+```
+
+```
