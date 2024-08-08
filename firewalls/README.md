@@ -95,6 +95,20 @@ This delete the deny 22 rule
 
 ## Allow Access from specific hosts
 
+- It can allow access from specific hosts or networks to a port
+
+- Example: Allows SSH access from host `192.168.0.2` to any IP address on this host:
+
+```bash
+ sudo ufw allow proto tcp from 192.168.0.2 to any port 22
+```
+
+- To allow SSH access from entire subnet enter:
+
+```bash
+ sudo ufw allow proto tcp from 192.168.0.2/24 to any port 22
+```
+
 ### References
 
 - https://ubuntu.com/server/docs/firewalls
