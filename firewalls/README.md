@@ -109,6 +109,14 @@ This delete the deny 22 rule
  sudo ufw allow proto tcp from 192.168.0.2/24 to any port 22
 ```
 
+### Simulate Adding Rules
+
+If you want to see what happens when you add a rule use `--dry-run` option to a `ufw` command.
+
+```bash
+  sudo ufw --dry-run allow http
+```
+
 ### References
 
 - https://ubuntu.com/server/docs/firewalls
