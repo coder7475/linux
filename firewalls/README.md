@@ -147,6 +147,10 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 
 ### ufw application integration
 
+### Special Tips For Newbies
+
+- After enabling firewall **never** exit from your remote server connection without `enabling` rule for `ssh` connection. Otherwise you won't be able to log into your own server.
+
 ### References
 
 - https://ubuntu.com/server/docs/firewalls
