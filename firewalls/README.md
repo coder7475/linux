@@ -19,6 +19,26 @@
 
 - `ufw` by default is initially disabled.
 
+### Check the status
+
+To see the firewall status, enter:
+
+```bash
+  sudo ufw status
+```
+
+And for more information, enter:
+
+```bash
+  sudo ufw status verbose
+```
+
+See numbered format:
+
+```bash
+  sudo ufw status numbered
+```
+
 ### Enable or disable ufw
 
 To enable `ufw`, run:
@@ -51,23 +71,27 @@ To close an opened port:
 
 Rules can also be added using a _numbered_ format.
 
-See numbered format:
+- See numbered format:
 
 ```bash
   sudo ufw status numbered
 ```
 
-To add a rule using _numbered_ format:
+- To add a rule using _numbered_ format:
 
 ```bash
-  sudo ufw insert 1 allow 80 # Add allowing 80 port as number 1 rule
+  sudo ufw insert 1 allow 80
 ```
 
-To remove a rule, use `delete` followed by the rule:
+This allowing 80 port as number 1 rule
+
+- To remove a rule, use `delete` followed by the rule:
 
 ```bash
-  sudo ufw delete deny 22 # delete the deny 22 rule
+  sudo ufw delete deny 22
 ```
+
+This delete the deny 22 rule
 
 ## Allow Access from specific hosts
 
