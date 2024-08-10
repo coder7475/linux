@@ -69,6 +69,19 @@ To close an opened port:
 
 ### Add or remove a rule
 
+Add Rule For Services. To allow ssh connection
+
+```bash
+  ufw allow ssh
+```
+
+Some important rules to allow:
+
+```bash
+  ufw allow http
+  ufw allow https
+```
+
 Rules can also be added using a _numbered_ format.
 
 - See numbered format:
@@ -146,6 +159,12 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 ```
 
 ### ufw application integration
+
+### Reset all rules of ufw
+
+```bash
+  ufw reset
+```
 
 ### Special Tips For Newbies
 
