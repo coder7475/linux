@@ -39,6 +39,12 @@ See numbered format:
   sudo ufw status numbered
 ```
 
+Show all added rules:
+
+```bash
+ufw show added
+```
+
 ### Enable or disable ufw
 
 To enable `ufw`, run:
@@ -178,6 +184,6 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 
 - https://github.com/coder7475/GeekyShowsNotes/blob/main/ufw_firewall_setup.md
 
-```
+- https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
 
-```
+- https://betterprogramming.pub/understanding-ufw-8d70d5d8f9d2
