@@ -1,9 +1,11 @@
 ## Server First 10 minutes for Ubuntu (Or all debian based Distros)
 
+What to do after getting a server vps first time:
+
 1. Check OS, Kernel, Hardware Architecture, Uptime
 
 ```bash
-    cat /etc/ubuntu-advantage
+    cat /etc/ubuntu-advantage/uclient.conf
     uname -a
     hostnamectl
     uptime
@@ -135,3 +137,5 @@ ls -l /etc/apt/sources.list.d/   # Lists all additional repository configuration
   tail -f /var/log/syslog  # Monitor and display latest log entries
   demsg                    # Shows kernel's ring buffer messages
 ```
+
+## References
