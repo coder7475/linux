@@ -247,7 +247,14 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
   suo ufw app list
 ```
 
-2. To allow `OpenSSH` enter:
+2. Syntax to add or deny app:
+
+```bash
+sudo ufw allow <application>
+sudo ufw deny <application>
+```
+
+3. To allow `OpenSSH` enter:
 
 ```bash
   sudo ufw allow "OpenSSH"
@@ -256,6 +263,58 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 ### Special Tips For Newbies
 
 - After enabling firewall **never** exit from your remote server connection without `enabling` rule for `ssh` connection. Otherwise you won't be able to log into your own server.
+
+## UFW Logging
+
+1. To see if logging is enabled:
+
+```bash
+  sudo ufw status verbose
+```
+
+2. To allow logging on:
+
+```bash
+  sudo ufw logging on
+```
+
+### Different levels of UFW Firewall logging
+
+There are 5 levels of UFW logging.
+
+1. `off`: Means logging is disabled.
+2. `low`: Will store logs related to blocked packets that do not match the current firewall rules and will show log entries related to logged rules.
+3. `medium`: In addition to all the logs offered by the low level, you get logs for invalid packets, new connections, and logging done through rate limiting.
+4. `high`: Will include logs for packets with rate limiting and without rate limiting.
+5. `full`: This level is similar to the high level but does not include the rate limiting.
+
+### To change logging level
+
+1. Syntax
+
+```bash
+  sudo ufw logging logging_level
+```
+
+2. If you want to change it to medium level
+
+```bash
+  sudo ufw logging logging_level
+```
+
+### Check logs
+
+1. See the Full logs:
+
+```bash
+  sudo less /var/log/ufw.log
+```
+
+2. See only last 10 line of log
+
+```bash
+  sudo tail -f /var/log/ufw.log
+```
 
 ### References
 
@@ -272,3 +331,5 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 - https://itsfoss.com/ufw-ubuntu/?ref=dailydev
 
 - https://opensource.com/article/20/12/linux-server?ref=dailydev
+
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu?ref=dailydev
