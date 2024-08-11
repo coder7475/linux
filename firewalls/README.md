@@ -89,6 +89,22 @@ To disable `ufw`, run:
   sudo ufw disable
 ```
 
+## Reload firewall for new rules
+
+If UFW is already enabled and you modify the firewall rules, you need to reload it before the changes take into effect.
+
+You can restart UFW by disabling it and enabling it again:
+
+```bash
+sudo ufw disable && sudo ufw enable
+```
+
+Or reload the rules:
+
+```bash
+sudo ufw reload
+```
+
 ### Open or close a port
 
 To open a port (port no: 22):
@@ -217,3 +233,5 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 - https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands
 
 - https://betterprogramming.pub/understanding-ufw-8d70d5d8f9d2
+
+- https://itsfoss.com/ufw-ubuntu/?ref=dailydev
