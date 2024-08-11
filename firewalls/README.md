@@ -27,12 +27,6 @@ To see the firewall status, enter:
   sudo ufw status
 ```
 
-And for more information, enter:
-
-```bash
-  sudo ufw status verbose
-```
-
 See numbered format:
 
 ```bash
@@ -44,6 +38,42 @@ Show all added rules:
 ```bash
 ufw show added
 ```
+
+And for more information, enter:
+
+```bash
+  sudo ufw status verbose
+```
+
+Above command will result:
+
+```bash
+# ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW IN    Anywhere
+44                         DENY IN     Anywhere
+22/tcp (v6)                ALLOW IN    Anywhere (v6)
+44 (v6)                    DENY IN     Anywhere (v6)
+```
+
+Explanation of output below:
+
+1. `deny (incoming)`: This will make sure that no outside systems can connect to your machine until you add an overriding rule for it.
+
+2. `allow (outgoing)`: This means that all outgoing requests are enabled. This setting helps you run commands like apt-install, wget, and ping without issues. But, if you want to keep your server secure it is better to change the defaults to block outgoing and then allow specific IPs/domains that you need.
+
+3. `disabled (routed)`. This means that all routing is disabled and forwarding is blocked. This is a good default provided you are not using your machine as a router.
+
+4. In **Action** column it is `ALLOW IN` & `DENY IN`. Which means there is also `ALLOW OUT` & `DENY OUT`.
+
+### UFW Defaults
+
+It's very important to understand ufw defaults for your security.
 
 ### Enable or disable ufw
 
