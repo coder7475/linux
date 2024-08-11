@@ -19,6 +19,20 @@
 
 - `ufw` by default is initially disabled.
 
+### Enable or disable ufw
+
+To enable `ufw`, run:
+
+```bash
+  sudo ufw enable
+```
+
+To disable `ufw`, run:
+
+```bash
+  sudo ufw disable
+```
+
 ### Check the status
 
 To see the firewall status, enter:
@@ -39,7 +53,11 @@ Show all added rules:
 ufw show added
 ```
 
-And for more information, enter:
+### UFW Defaults
+
+It's very important to understand ufw defaults for your security.
+
+Enter:
 
 ```bash
   sudo ufw status verbose
@@ -71,24 +89,6 @@ Explanation of output below:
 
 4. In **Action** column it is `ALLOW IN` & `DENY IN`. Which means there is also `ALLOW OUT` & `DENY OUT`.
 
-### UFW Defaults
-
-It's very important to understand ufw defaults for your security.
-
-### Enable or disable ufw
-
-To enable `ufw`, run:
-
-```bash
-  sudo ufw enable
-```
-
-To disable `ufw`, run:
-
-```bash
-  sudo ufw disable
-```
-
 ## Reload firewall for new rules
 
 If UFW is already enabled and you modify the firewall rules, you need to reload it before the changes take into effect.
@@ -103,6 +103,12 @@ Or reload the rules:
 
 ```bash
 sudo ufw reload
+```
+
+### Reset all rules of ufw
+
+```bash
+  ufw reset
 ```
 
 ### Open or close a port
@@ -158,6 +164,20 @@ This allowing 80 port as number 1 rule
 
 This delete the deny 22 rule
 
+### To check all open ports that are running
+
+1. Install `net-tools` if not already installed
+
+```bash
+  sudo apt install net-tools
+```
+
+2. Show all open port that are currently running:
+
+```bash
+  netstat -tulpn
+```
+
 ## Allow Access from specific hosts
 
 - It can allow access from specific hosts or networks to a port
@@ -196,27 +216,7 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
  IPV6=yes
 ```
 
-### To check all open ports that are running
-
-1. Install `net-tools` if not already installed
-
-```bash
-  sudo apt install net-tools
-```
-
-2. Show all open port that are currently running:
-
-```bash
-  netstat -tulpn
-```
-
 ### ufw application integration
-
-### Reset all rules of ufw
-
-```bash
-  ufw reset
-```
 
 ### Special Tips For Newbies
 
