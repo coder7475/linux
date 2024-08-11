@@ -111,44 +111,50 @@ sudo ufw reload
   ufw reset
 ```
 
-### Open or close a port
+### How to add ufw rules
 
-To open a port (port no: 22):
+Syntax to add rule:
+
+```bash
+sudo ufw allow <port>/<optional: protocol>
+sudo ufw deny <port>/<optional: protocol>
+```
+
+#### Examples
+
+1. To open a port (port no: 22):
 
 ```bash
   sudo ufw allow 22
 ```
 
-To close an opened port:
+2. To close an opened port:
 
 ```bash
   sudo ufw deny 22
 ```
 
-### Add or remove a rule
-
-Add Rule For Services. To allow ssh connection
+3. To allow ssh connection
 
 ```bash
   ufw allow ssh
 ```
 
-Some important rules to allow:
+4. To allow http and https
 
 ```bash
-  ufw allow http
-  ufw allow https
+  sudo ufw allow http && sudo ufw allow https
 ```
 
-Rules can also be added using a _numbered_ format.
+_Rules can also be added using a \_numbered_ format.\_
 
-- See numbered format:
+5. See numbered format:
 
 ```bash
   sudo ufw status numbered
 ```
 
-- To add a rule using _numbered_ format:
+6. To add a rule using _numbered_ format:
 
 ```bash
   sudo ufw insert 1 allow 80
@@ -156,7 +162,7 @@ Rules can also be added using a _numbered_ format.
 
 This allowing 80 port as number 1 rule
 
-- To remove a rule, use `delete` followed by the rule:
+7. To remove a rule, use `delete` followed by the rule:
 
 ```bash
   sudo ufw delete deny 22
@@ -176,6 +182,23 @@ This delete the deny 22 rule
 
 ```bash
   netstat -tulpn
+```
+
+3. To further check your network connection use:
+
+```bash
+  netstat -anp   # Detailed info about all network connection
+  lsof -i        # List open network file
+  ss		 # Display socket statistics and network connections
+  ss -t # Display all TCP sockets
+  ss -u # Display all UDP Sockets
+  ss -l # All listening sockets
+  ss -a # All Sockets
+  ss -s # Summary statistics
+  ss -p # Process using the socket
+  ss -n # Show numerical addresses instead of hostman
+  iptables -L -n # List all firewall rules with IP address & port number
+  cat /etc/resolv.conf # List info about DNS config of system
 ```
 
 ## Allow Access from specific hosts
@@ -218,6 +241,18 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 
 ### ufw application integration
 
+1. See all available apps:
+
+```bash
+  suo ufw app list
+```
+
+2. To allow `OpenSSH` enter:
+
+```bash
+  sudo ufw allow "OpenSSH"
+```
+
 ### Special Tips For Newbies
 
 - After enabling firewall **never** exit from your remote server connection without `enabling` rule for `ssh` connection. Otherwise you won't be able to log into your own server.
@@ -235,3 +270,5 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 - https://betterprogramming.pub/understanding-ufw-8d70d5d8f9d2
 
 - https://itsfoss.com/ufw-ubuntu/?ref=dailydev
+
+- https://opensource.com/article/20/12/linux-server?ref=dailydev
