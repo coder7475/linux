@@ -20,7 +20,7 @@
 
 **See the uptime of the server**:
 
-```bash
+````bash
     uptime
 ``
 
@@ -29,7 +29,7 @@
 
 ```bash
   sudo nano /etc/hostname
-```
+````
 
 2. Edit the file change the host name:
 
@@ -41,4 +41,10 @@
 
 ```bash
   sudo reboot
+```
+
+4. Make a file undeletable
+
+```bash
+   sudo chattr +i -V filename.txt
 ```
