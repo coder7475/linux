@@ -244,7 +244,7 @@ If you want to see what happens when you add a rule use `--dry-run` option to a 
 1. See all available apps:
 
 ```bash
-  suo ufw app list
+  sudo ufw app list
 ```
 
 2. Syntax to add or deny app:
