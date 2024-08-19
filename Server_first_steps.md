@@ -13,11 +13,11 @@ What to do after getting a server vps first time:
 
 2. Who else logged In?
 
-````bash
+```bash
    who
    who -Hu
    grep sh$ /etc/passwd
-``
+```
 
 3. Physical oe Virtual Machine?
 
@@ -27,7 +27,7 @@ dmidecode -s system-product-name
 lshw -c system | grep product | head -1
 cat /sys/class/dmi/id/product_name
 cat /sys/class/dmi/id/sys_vendor
-````
+```
 
 4. Hardware Information
 
