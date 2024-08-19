@@ -102,6 +102,4 @@ Thanks for reading.
 
 2. https://www.hostinger.com/tutorials/how-to-change-ssh-port-vps
 
-3. https://www.hostinger.com/tutorials/how-to-change-ssh-port-vps
-
-4. https://monovm.com/blog/default-ssh-port/#:~:text=There%20are%20over%2065%2C000%20possible,designated%20port%20for%20SSH%20connections
+3. https://monovm.com/blog/default-ssh-port/#:~:text=There%20are%20over%2065%2C000%20possible,designated%20port%20for%20SSH%20connections
