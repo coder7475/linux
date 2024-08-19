@@ -16,7 +16,85 @@ Here's why changing it is a smart security practice:
 
 ## How to change default ssh port in vps
 
-1. Login to your
+1. **Login** to your remote server using default port 22
+
+```bash
+  sudo ssh root@your_ip_address
+```
+
+Give password if asked.
+
+2. **Backup**: Keeping a backup of your file is always a good option. Use this command to create a backup first:
+
+```bash
+ sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config_backup
+```
+
+3. **Change Port**: Open your **sshd_config** file using a editor:
+
+```bash
+  sudo vim /etc/ssh/sshd_config
+```
+
+Change commented out line from
+
+```bash
+  #Port 22
+```
+
+to port to your want to change
+
+```bash
+  Port 45673
+```
+
+save and exit
+
+4. Restart the ssh service
+
+```bash
+  sudo service sshd restart
+```
+
+OR
+
+```bash
+  sudo systemctl restart sshd
+```
+
+5. Check if sshd service is restarted
+
+```bash
+  sudo systemctl status sshd
+```
+
+6. If your server has firewall enabled allow the server to listen on new port. For `ufw` use:
+
+```bash
+ sudo ufw allow 45673/tcp
+```
+
+7. Reload the firewall
+
+```bash
+  sudo ufw reload
+```
+
+8. Check the firewall status
+
+```bash
+  sudo ufw status
+```
+
+9. Now don't exit, open a new shell. Check if you can connect using new port:
+
+```bash
+  ssh -p 45673 root@your_ip_address
+```
+
+If you can, then your good to go. If it shows `refused to connect` then your firewall didn't allow the port, change the firewall rule. Or if it's show `Bad Port` then this port is used in other work, change the port.
+
+Thanks for reading.
 
 ### References
 
