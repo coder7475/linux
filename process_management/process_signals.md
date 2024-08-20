@@ -26,7 +26,7 @@ TERM(15) - Tells process to please terminate, allow clean up operations and exit
 
 KILL(9) - Tells OS kernel to shut down the process
 
-HUP - Tells apache webserver to reload the configuration 
+HUP - Tells apache webserver to reload the configuration
 
 # Terminologies
 

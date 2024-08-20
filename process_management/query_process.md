@@ -1,4 +1,4 @@
-# Query Running Processes - BASH SHELL
+c# Query Running Processes - BASH SHELL
 
 Output shows all the process associated with the current user & terminal session
 

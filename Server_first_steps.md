@@ -19,7 +19,7 @@ What to do after getting a server vps first time:
    grep sh$ /etc/passwd
 ```
 
-3. Physical oe Virtual Machine?
+3. Physical or Virtual Machine?
 
 ```bash
 dmidecode -s system-manufacturer
