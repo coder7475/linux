@@ -48,3 +48,9 @@
 ```bash
    sudo chattr +i -V filename.txt
 ```
+
+5. Remove a directory with its subdirectories and files
+
+```bash
+  yes "yes" | rm -vRI directory
+```
