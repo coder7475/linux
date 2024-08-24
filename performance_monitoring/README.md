@@ -15,3 +15,7 @@ There are many tools available to monitor the performance of your application. S
 - A fully interactive performance monitoring command-line utility tool
 
 - Displays performance about the cpu, memory, network, disks, filesystem, nfs, top process, resources and power micro-partition.
+
+### Documentation
+
+1. `nmon` - https://www.ibm.com/docs/en/aix/7.2?topic=n-nmon-command
