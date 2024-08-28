@@ -38,13 +38,13 @@ The `id` command provides a comprehensive overview of a user's identity, making 
 whoami
 ```
 
-### Explanation
+### Explanation of whoami
 
 The `whoami` command is used to display the username of the current user. It prints the effective user name associated with the current user session.
 
 - **`whoami`**: Literally stands for "who am I," and outputs the current user's username.
 
-#### Example Output
+#### Example Output of whoami
 
 ```bash
 username
