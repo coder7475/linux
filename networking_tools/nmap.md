@@ -159,3 +159,85 @@ Port scanning is a core function of Nmap, identifying the status of 1,000 TCP po
 - **Closed|Filtered**: Nmap is unable to decide if a port is closed or filtered. This rare state is typically identified through the IP ID idle scan.
 
 These port states help administrators and security professionals understand the accessibility and potential vulnerabilities of networked systems, guiding further actions like firewall configuration or deeper scans.
+
+## Port Scanning Techniques
+
+Port scanning is akin to a mechanic choosing the right tool for a job. While novices might rely on default methods like SYN scans, experts use various techniques tailored to their needs. Here’s a summary of the key scanning methods:
+
+### Privileged Access
+
+Many scan types require root access (Unix) or admin privileges (Windows) to send and receive raw packets. While early Nmap versions were limited by shared accounts, modern systems and desktops make privileged access more feasible.
+
+### Scanning Methods
+
+- **SYN Scan (`-sS`)**:
+
+  - Default and popular, it performs quickly and stealthily by sending SYN packets and analyzing responses.
+  - Efficient for detecting open, closed, and filtered ports.
+
+- **Connect Scan (`-sT`)**:
+
+  - Used when SYN scan isn't available.
+  - Establishes full TCP connections, which is slower and less stealthy compared to SYN scans.
+  - Suitable for environments where raw packet access is restricted.
+
+- **UDP Scan (`-sU`)**:
+
+  - Scans for UDP services like DNS and DHCP.
+  - Slower than TCP scans due to the lack of responses from many UDP ports.
+  - Can be combined with TCP scans for comprehensive coverage.
+
+- **SCTP INIT Scan (`-sY`)**:
+
+  - Equivalent of SYN scan for SCTP, used for services like SS7/SIGTRAN.
+  - Quick and stealthy but cannot distinguish between open and filtered ports.
+
+- **TCP NULL, FIN, Xmas Scans (`-sN`, `-sF`, `-sX`)**:
+
+  - Exploit TCP RFC loopholes to identify port states based on specific flags.
+  - Can bypass some firewalls but are less reliable due to varying system responses.
+
+- **ACK Scan (`-sA`)**:
+
+  - Maps firewall rulesets by sending ACK packets.
+  - Doesn’t determine open ports but identifies filtered ones.
+
+- **Window Scan (`-sW`)**:
+
+  - Similar to ACK scan but uses TCP Window size to differentiate between open and closed ports.
+  - Useful but less reliable due to system-specific implementations.
+
+- **Maimon Scan (`-sM`)**:
+
+  - Uses FIN/ACK flags to detect port states.
+  - Effective against Unix systems but less reliable on others like Windows.
+
+- **Custom TCP Scan (`--scanflags`)**:
+
+  - Allows users to design custom scans by specifying arbitrary TCP flags.
+  - Offers advanced scanning but requires knowledge of TCP flags and their implications.
+
+- **SCTP COOKIE ECHO Scan (`-sZ`)**:
+
+  - Advanced SCTP scan that detects open ports based on response to COOKIE ECHO chunks.
+  - Cannot differentiate between open and filtered ports.
+
+- **Idle Scan (`-sI`)**:
+
+  - Stealthy scan using a "zombie" host to infer port status on the target without sending packets from the scanner’s IP.
+  - Useful for mapping IP trust relationships but requires a suitable zombie host.
+
+- **IP Protocol Scan (`-sO`)**:
+
+  - Identifies supported IP protocols (e.g., TCP, UDP, ICMP) on a target.
+  - Not a port scan but useful for understanding protocol availability.
+
+- **FTP Bounce Scan (`-b`)**:
+  - Exploits FTP proxy connections to scan ports on a target via a vulnerable FTP server.
+  - Largely obsolete but useful against some configurations.
+
+Each scan type has its own strengths and limitations, and choosing the right one depends on the target environment and scanning objectives.
+
+## Further Reading
+
+- [Nmap Official Docs](https://nmap.org/book/man-port-specification.html)
