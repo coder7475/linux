@@ -94,7 +94,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 48.75 seconds
 ```
 
-# Host Discovery in Network Reconnaissance
+## Host Discovery in Network Reconnaissance
 
 Host discovery is a crucial step in network reconnaissance, aimed at identifying active hosts within a network. Nmap offers various methods to perform host discovery effectively:
 
@@ -141,3 +141,21 @@ Host discovery is a crucial step in network reconnaissance, aimed at identifying
   - Opt for more intrusive or exhaustive probes when higher levels of detail or accuracy are needed.
 
 Nmap’s host discovery options are highly customizable, allowing users to fine-tune their scans according to specific network reconnaissance needs.
+
+## Port Scanning Basics
+
+Port scanning is a core function of Nmap, identifying the status of 1,000 TCP ports on a target host using a simple command: `nmap <target>`. Unlike traditional port scanners that categorize ports as either open or closed, Nmap provides more granularity by classifying ports into six distinct states:
+
+- **Open**: An application is actively accepting connections on this port. This is the primary interest of port scanning, as open ports can indicate services available for exploitation or legitimate use.
+
+- **Closed**: The port is accessible, but no application is listening. Closed ports can still provide useful information for host discovery and OS detection. Administrators might block these ports with firewalls, changing their state to filtered.
+
+- **Filtered**: Nmap cannot determine if the port is open because packet filtering (from firewalls or routers) prevents probes from reaching it. This state provides minimal information and slows down scans due to retries.
+
+- **Unfiltered**: The port is accessible, but Nmap cannot determine if it is open or closed. This state is identified primarily through ACK scans and can require further scanning to clarify the port's status.
+
+- **Open|Filtered**: Nmap cannot discern whether a port is open or filtered, often due to a lack of response from the target. This state is common in UDP, IP protocol, and certain TCP scan types (e.g., FIN, NULL, Xmas).
+
+- **Closed|Filtered**: Nmap is unable to decide if a port is closed or filtered. This rare state is typically identified through the IP ID idle scan.
+
+These port states help administrators and security professionals understand the accessibility and potential vulnerabilities of networked systems, guiding further actions like firewall configuration or deeper scans.
