@@ -37,3 +37,7 @@ tr [OPTION]... SET1 [SET2]
    ```
 
 These examples demonstrate the fundamental uses of the `tr` command for character translation and manipulation.
+
+## Learn More:
+
+- [linux-tr](https://phoenixnap.com/kb/linux-tr)
