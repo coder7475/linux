@@ -150,3 +150,7 @@ This bash script demonstrates the use of `eval` in combination with the `tr` com
    - Finally, the script echoes the converted lowercase values.
 
 The use of `eval` in this script allows for dynamic variable assignment. However, it's worth noting that while this script demonstrates a use case for `eval`, in this specific scenario, it's not strictly necessary. The same result could be achieved more safely and efficiently without `eval`, like this:
+
+## References
+
+- [phonixNAP](https://phoenixnap.com/kb/bash-eval#:~:text=The%20eval%20command%20concatenates%20the,returns%20the%20exit%20status%200%20.)
