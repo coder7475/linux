@@ -37,8 +37,3 @@ tr [OPTION]... SET1 [SET2]
    ```
 
 These examples demonstrate the fundamental uses of the `tr` command for character translation and manipulation.
-
-```
-
-This continuation provides the basic syntax, common options, and some basic usage examples of the `tr` command, which are essential for understanding its functionality.
-```
