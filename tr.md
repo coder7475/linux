@@ -4,13 +4,9 @@ The `tr` command, short for "translate" or "transliterate", is a powerful utilit
 
 Here's a concise continuation of the `tr` command guide, focusing on its basic syntax:
 
-````tr.md
-## Basic Syntax
-The basic syntax of the `tr` command is:
-
 ```bash
 tr [OPTION]... SET1 [SET2]
-````
+```
 
 - `SET1`: The set of characters to be translated or deleted.
 - `SET2`: The set of characters to translate to (optional).
